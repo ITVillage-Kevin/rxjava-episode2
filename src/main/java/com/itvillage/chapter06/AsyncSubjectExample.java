@@ -10,7 +10,6 @@ import io.reactivex.subjects.AsyncSubject;
  */
 public class AsyncSubjectExample {
     public static void main(String[] args){
-        AsyncProcessor p = AsyncProcessor.create();
         AsyncSubject<Integer> subject = AsyncSubject.create();
         subject.onNext(1000);
 
@@ -27,5 +26,8 @@ public class AsyncSubjectExample {
         subject.onNext(4000);
 
         subject.onComplete();
+
+        subject.doOnNext(price -> Logger.log(LogType.DO_ON_NEXT, "# 소비자 4 : " + price))
+                .subscribe(price -> Logger.log(LogType.ON_NEXT, "# 소비자 4 : " + price));
     }
 }
