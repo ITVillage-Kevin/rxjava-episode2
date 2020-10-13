@@ -14,7 +14,7 @@ public class DoOnEachExample {
                     if(notification.isOnNext())
                         Logger.log(LogType.DO_ON_NEXT, "# 생산자: 데이터 통지 - " + notification.getValue());
                     else if(notification.isOnError())
-                        Logger.log(LogType.DO_ON_EACH, "# 생산자: 에러 발생 - " + notification.getError());
+                        Logger.log(LogType.DO_ON_ERROR, "# 생산자: 에러 발생 - " + notification.getError());
                     else
                         Logger.log(LogType.DO_ON_COMPLETE, "# 생산자: 데이터 통지 완료");
                 })
