@@ -9,12 +9,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * blockingLast를 사용한 통지된 마지막 데이터를 테스트하는 예제
  */
-public class BlockingLastTest extends RxJavaTest {
+public class BlockingLastTest {
     // Car 리스트 중 마지막 Car 테스트
     @Test
     public void getCarStreamLastTest(){
         // when
-        Car car = sampleObservable.getCarStream().blockingLast();
+        Car car = SampleObservable.getCarStream().blockingLast();
         String actual = car.getCarName();
 
         // then
@@ -25,7 +25,7 @@ public class BlockingLastTest extends RxJavaTest {
     @Test
     public void getSalesOfBranchALastTest(){
         // when
-        int actual = sampleObservable.getSalesOfBranchA()
+        int actual = SampleObservable.getSalesOfBranchA()
                     .take(6)
                     .blockingLast();
 

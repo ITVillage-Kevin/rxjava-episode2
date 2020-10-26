@@ -49,13 +49,13 @@ public class SampleObservable {
                 .subscribeOn(Schedulers.computation());
     }
 
-    public Observable<Integer> getSpeedOfSectionA() {
+    public static Observable<Integer> getSpeedOfSectionA() {
         return Observable
                 .fromArray(SampleData.speedOfSectionA)
                 .subscribeOn(Schedulers.computation());
     }
 
-    public  Observable<Integer> getTemperatureOfSeoul() {
+    public static Observable<Integer> getTemperatureOfSeoul() {
         return Observable
                 .fromArray(SampleData.temperatureOfSeoul)
                 .subscribeOn(Schedulers.computation());

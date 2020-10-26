@@ -10,12 +10,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * blogkingIterable을 사용한 통지 데이터 테스트 예제
  */
-public class BlockingIterableTest extends RxJavaTest {
+public class BlockingIterableTest {
     // 전체 CarMaker의 요소가 맞는지 모두 테스트한다.
     @Test
     public void getCarMakerIterableTest() {
         // when
-        Iterable<CarMaker> iterable = sampleObservable.getCarMakerStream()
+        Iterable<CarMaker> iterable = SampleObservable.getCarMakerStream()
                 .blockingIterable();
 
         Iterator<CarMaker> iterator = iterable.iterator();
