@@ -16,19 +16,8 @@ import java.util.List;
 public class UnitTestNotByRxJava {
     @Test
     public void getCarMakerStreamSyncTest(){
-        SampleObservable sampleObservable = new SampleObservable();
         List<CarMaker> carMakerList = new ArrayList<>();
-        sampleObservable.getCarMakerStream()
-                .subscribe(data -> carMakerList.add(data));
-        assertThat(carMakerList.size(), is(5));
-    }
-
-    @Test
-    public void getCarMakerStreamASyncTest(){
-        SampleObservable sampleObservable = new SampleObservable();
-        List<CarMaker> carMakerList = new ArrayList<>();
-        sampleObservable.getCarMakerStream()
-                .subscribeOn(Schedulers.computation())
+        SampleObservable.getCarMakerStream()
                 .subscribe(data -> carMakerList.add(data));
         assertThat(carMakerList.size(), is(5));
     }
