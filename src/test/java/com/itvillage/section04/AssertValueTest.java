@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * assertValue를 이용한 데이터 검증 예제
  */
-public class AssertValueTest01 extends RxJavaTest {
+public class AssertValueTest extends RxJavaTest {
     @Test
     public void assertValueTest(){
         Observable.just("a")
