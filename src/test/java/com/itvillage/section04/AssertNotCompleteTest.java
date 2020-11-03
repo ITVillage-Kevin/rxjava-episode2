@@ -1,6 +1,7 @@
 package com.itvillage.section04;
 
 import com.itvillage.section03.RxJavaTest;
+import com.itvillage.section03.SampleObservable;
 import com.itvillage.utils.TimeUtil;
 import org.junit.Test;
 
@@ -9,12 +10,12 @@ import java.util.concurrent.TimeUnit;
 /**
  * assertNotComplete를 이용하여 A 지점과 B 지점의 매출 합계 처리가 지정된 시간안에 끝나지않는지 검증하는 예제
  */
-public class AssertNotCompleteTest extends RxJavaTest {
+public class AssertNotCompleteTest {
     @Test
     public void assertNotCompleteTest() {
-        sampleObservable.getSalesOfBranchA()
+        SampleObservable.getSalesOfBranchA()
                 .zipWith(
-                        sampleObservable.getSalesOfBranchB(),
+                        SampleObservable.getSalesOfBranchB(),
                         (a, b) -> {
                             TimeUtil.sleep(1000L);
                             return a + b;

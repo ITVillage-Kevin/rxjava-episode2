@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * assertResult를 사용하여 통지 완료 후, 통지된 데이터와 파라미터로 입력된 데이터의 값과 순서가 일치하는지 검증하는 예제
  */
-public class AssertResultTest extends RxJavaTest {
+public class AssertResultTest {
     // 테스트 실패 예제
     @Test
     public void assertResultFailTest(){

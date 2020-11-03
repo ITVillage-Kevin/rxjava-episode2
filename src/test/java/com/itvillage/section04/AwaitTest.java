@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * await 을 이용해서 생산자쪽 쓰레드에서 통지가 끝날때까지 또는 지정한 시간만큼 대기하는 예제
  */
-public class AwaitTest extends RxJavaTest {
+public class AwaitTest {
     // 생산자쪽에서 완료 통지를 보낼때까지 대기한 후, 완료 및 통지된 데이터 개수를 검증하는 예제
     @Test
     public void awaitTest() throws InterruptedException {

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * assertXXX 함수를 체인으로 연결하여 다양한 케이스의 검증을 할 수 있는 예제
  */
-public class AssertChainTest extends RxJavaTest {
+public class AssertChainTest {
     @Test
     public void assertChainTest() {
         Observable.interval(200L, TimeUnit.MILLISECONDS)

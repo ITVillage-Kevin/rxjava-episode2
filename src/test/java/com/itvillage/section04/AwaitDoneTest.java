@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * awaitDone 을 이용해서 지정된 시간 또는 완료 통지가 있을때까지 대기하는 예제
  */
-public class AwaitDoneTest extends RxJavaTest {
+public class AwaitDoneTest {
     // 지정된 시간까지 완료 통지가 없이, 해당 시점까지 전달 받은 데이터의 개수가 맞는지 검증하는 예제
     @Test
     public void awaitDoneTest01() {

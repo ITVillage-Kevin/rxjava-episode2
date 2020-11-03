@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * assertNoValues를 이용해 통지 시점까지 통지된 데이터가 없는지 검증하는 예제
  */
-public class AssertNoValuesTest extends RxJavaTest {
+public class AssertNoValuesTest {
     @Test
     public void assertNoValuesTest(){
         Observable.interval(200L, TimeUnit.MILLISECONDS)
