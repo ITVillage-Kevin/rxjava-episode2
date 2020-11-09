@@ -10,7 +10,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestObserverEventTest {
-    // 완료 통지 이벤트가 발생했는지를 검증하는 예제
+    // 완료 통지 이벤트가 발생해서 종료 되었는지를 검증하는 예제
     @Test
     public void isTerminalEventTest(){
         boolean result = Observable.interval(200L, TimeUnit.MILLISECONDS)
@@ -25,12 +25,11 @@ public class TestObserverEventTest {
         assertThat(result, is(true));
     }
 
-    // 에러 통지 이벤트가 발생했는지를 검증하는 예제
+    // 에러 통지 이벤트가 발생해서 종료 되었는지를 검증하는 예제
     @Test
     public void isErrorEventTest(){
         boolean result = Observable.interval(200L, TimeUnit.MILLISECONDS)
                 .doOnNext(data -> Logger.log(LogType.DO_ON_NEXT, data))
-                .take(5)
                 .map(data -> {
                     if(data == 2)
                         throw new RuntimeException("Error happened");

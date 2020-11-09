@@ -28,7 +28,7 @@ public class AwaitTest {
                 .assertValueCount(5);
     }
 
-    // 지정한 시간동안 완료 통지를 받지 못해서 Timeout이 되었는지 검증하는 예제
+    // 지정한 시간동안 대기하면서 대기 시간내에 완료 통지를 받았는지 여부를 검증하는 예제
     @Test
     public void awaitTest02() throws InterruptedException {
         boolean result = Observable.interval(1000L, TimeUnit.MILLISECONDS)
